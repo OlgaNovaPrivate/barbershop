@@ -1,0 +1,42 @@
+diff --git a/node_modules/react-dateslot-picker/dist/main.es.js b/node_modules/react-dateslot-picker/dist/main.es.js
+index 562f765..9f01363 100644
+--- a/node_modules/react-dateslot-picker/dist/main.es.js
++++ b/node_modules/react-dateslot-picker/dist/main.es.js
+@@ -5685,7 +5685,7 @@ const qn = Intl.DateTimeFormat().resolvedOptions().timeZone, Da = "forward", xa
+   };
+ }, _a = ["S", "M", "T", "W", "T", "F", "S"], me = {
+   bg: {
+-    dark: "dateslotpicker-bg-[#1e1c22]"
++    dark: "dateslotpicker-bg-[#FFFFFF]"
+   },
+   headerColor: {
+     dark: " dateslotpicker-text-red-500"
+diff --git a/node_modules/react-dateslot-picker/src/.DS_Store b/node_modules/react-dateslot-picker/src/.DS_Store
+new file mode 100644
+index 0000000..e69de29
+diff --git a/node_modules/react-dateslot-picker/src/components/DatePicker/index.tsx b/node_modules/react-dateslot-picker/src/components/DatePicker/index.tsx
+index f89637d..393e98a 100644
+--- a/node_modules/react-dateslot-picker/src/components/DatePicker/index.tsx
++++ b/node_modules/react-dateslot-picker/src/components/DatePicker/index.tsx
+@@ -30,7 +30,7 @@ const weeklyStr = ['S', 'M', 'T', 'W', 'T', 'F', 'S'] as string[];
+ 
+ const stylesMap = {
+   bg: {
+-    dark: 'dateslotpicker-bg-[#1e1c22]',
++    dark: 'dateslotpicker-bg-[#FFFFFF]',
+   },
+   headerColor: {
+     dark: ' dateslotpicker-text-red-500',
+diff --git a/node_modules/react-dateslot-picker/src/hook/useTimeSlotPicker.ts b/node_modules/react-dateslot-picker/src/hook/useTimeSlotPicker.ts
+index 153a9bf..f353cc5 100644
+--- a/node_modules/react-dateslot-picker/src/hook/useTimeSlotPicker.ts
++++ b/node_modules/react-dateslot-picker/src/hook/useTimeSlotPicker.ts
+@@ -55,6 +55,8 @@ const getTimeslot = ({
+           timeslot.push(currentDateTime);
+         };
+ 
++        console.log("Duration ", duration);
++
+         currentDateTime = DateTime.fromMillis(
+           currentDateTime.toMillis() + duration * 60000
+         );
